@@ -1,0 +1,280 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif ;
+
+}
+:root{
+    color: #39322a;
+    
+}
+body{
+    background: linear-gradient(#111,#222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.countiner{
+   width: 80%;
+   height: 80%;
+   background: rgba(255, 255, 255, .1);
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+body::after{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background: #455b8c;
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+nav .logo{
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+
+}
+
+
+ nav ul li{
+    display: inline-block;
+    
+    margin: 0 6px;
+
+ }
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+nav ul li:first-child a:hover{
+    color: #455b8c;
+} 
+ 
+
+nav ul li:nth-child(2) a:hover {
+    color: #522d35;
+}
+nav ul li:nth-child(3) a:hover{
+    color: #070b0c;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.content .text{
+    color: white;
+    width: 40%;
+    
+}
+.content .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+.content .text p{
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+.content .img{
+    width: 40%;
+}
+.content .img img{
+    width: 400px;
+}
+.content .text p span{
+    color: #455b8c;
+    font-weight: 600;
+    font-size: 22px;
+
+
+}
+.social{
+    text-decoration: none;
+    
+    
+}
+
+
+@media screen and (min-width: 500px) {
+    ul {
+        display: flex;
+    }
+}
+
+
+@media (min-width:950px) and (max-width:1250px) {
+    .content .img img{
+        width: 300px;
+    }
+}
+@media (max-width:1200) and (min-width:1024px ) {
+    .content, nav{
+        
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    nav{
+        padding: 20px 20px;
+    }
+    .content .img, .content .text{
+        width: 80%;
+    }
+    .content .img img {
+       width: 250px;
+    }
+    body::after{
+        clip-path: circle(50% at bottom );
+    }
+}
+@media (min-width:768px) and (max-width:1024px){
+    .content, nav{
+        
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav{
+        padding: 20px 20px;
+    }
+    .content .img, .content .text{
+        width: 80%;
+    }
+    .content .img img {
+       width: 230px;
+    }
+    body::after{
+        clip-path: circle(50% at bottom );
+    }
+
+}
+@media (min-width:480px) and (max-width:768px){
+    .content, nav{
+        
+        flex-direction: column;
+        justify-content: center;
+       
+    }
+    .content{
+        height: 80%;
+    }
+    nav{
+        padding: 20px 20px;
+    }
+    .content .img, .content .text{
+        width: 80%;
+    }
+    .content .img img {
+       width: 190px;
+    }
+    body::after{
+        clip-path: circle(50% at bottom );
+    }
+    .content .text h2 {
+        font-size: 1.9rem; /* Smaller title */
+    }
+    .content .text p {
+        font-size: 1.2rem; /* Smaller paragraph text */
+    }
+    .content .text p span{
+       
+        font-weight: 600;
+        font-size: 1.7em;
+    
+    }
+
+}
+
+@media (min-width:480px) and (max-width:768px){
+    .content, nav{
+        
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .img, .content .text{
+        width: 80%;
+    }
+    nav{
+        padding: 20px 20px;
+    }
+    .content .img img {
+       width: 150px;
+    }
+    body::after{
+        clip-path: circle(50% at bottom );
+    }
+    .content .text h2 {
+        font-size: 1.5rem; /* Smaller title */
+    }
+    .content .text p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+    .content .text p span{
+        
+        font-weight: 500;
+        font-size: 1.3em;
+
+    
+    }
+
+}
+@media (max-width:480px){
+    .content, nav{
+        
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .img, .content .text{
+        width: 80%;
+    }
+    nav{
+        padding: 20px 20px;
+    }
+    .content .img img {
+       width: 140px;
+    }
+    body::after{
+        clip-path: circle(50% at bottom );
+    }
+    .content .text h2 {
+        font-size: 1.5rem; /* Smaller title */
+    }
+    .content .text p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+    .content .text p span{
+        
+        font-weight: 500;
+        font-size: 1.3em;
+
+    
+    }
+
+}
